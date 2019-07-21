@@ -1,5 +1,6 @@
-f= open("test1-10.txt","w+")
-for i in range(10):
-     f.write("This is line %d\r\n" % (i+1))
-     f.close()
+f = open("test1-100.txt", "w+")
+for i in range(100):
+  f.write("%i\n" %(i+1))
+f.close()
 
+#\n indicates new line
