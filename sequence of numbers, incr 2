@@ -1,7 +1,7 @@
 #Create a sequence of numbers from 3 to 19, but increment by 2 instead of 1:
 
-f = open("test50-100.txt", "w+")
-for i in range(49, 100):
+f = open("test3-19_incr2.txt", "w+")
+for i in range(3, 20, 2):
   f.write("%i\n" %(i+1))
 f.close()
 
