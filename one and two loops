@@ -1,0 +1,15 @@
+# indented, repeating the loop for both commands
+
+f = open("test50-100.txt", "w+")
+for i in range(49, 100):
+    f.write("%i\n" %(i+1))
+    f.write("blah\n")
+f.close()
+
+# without indention, it repeats the loop and adds the second command to the end.
+
+f = open("test50-100.txt", "w+")
+for i in range(49, 100):
+    f.write("%i\n" %(i+1))
+f.write("blah\n")
+f.close()
