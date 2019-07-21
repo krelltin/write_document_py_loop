@@ -4,3 +4,4 @@ for i in range(100):
 f.close()
 
 #\n indicates new line
+# wrong type if just f.write((i+1)), need to convert to string argument, since it can just print a string.
