@@ -1,0 +1,25 @@
+from bs4 import BeautifulSoup
+https://github.com/krelltin/write_document_py_loop
+with open("./web_pages_main/btn_exclusive_page0.html") as fp:
+    soup = BeautifulSoup(fp, "html.parser")
+
+# loop for scraping of page range 0-21
+# command "with" "as" in fp - opens and stores the html file in fp
+#title_output & link_output will be overwritten because they are caught in the loop.
+
+
+for i in range (0, 22):
+    with open("./web_pages_main/btn_exclusive_page%i.html" %(i)) as fp:
+        soup = BeautifulSoup(fp, "html.parser")
+        title_output = open("article_titles.txt", "w+")
+        link_output = open("article_links.txt", "w+")
+        for link in soup.find_all('div', class_='content-title'):
+            print("found article")
+            print(link)
+            print(link.get_text())
+            title_output.write((link.get_text()).encode('utf-8').strip()+"\n")
+            link_html = link.find('a')
+            print("https://www.thebtn.tv"+link_html.get('href'))
+            link_output.write("https://www.thebtn.tv"+(link_html.get('href')).encode('utf-8').strip()+"\n")
+            print("\n")
+           
