@@ -27,3 +27,5 @@ for i in range (0, 22):
 #<div class="content-title"><a href="/exclusive-content/video/successfully-implementing-hr-change-programmes-anton-fishman">Successfully Implementing HR Change Programmes by Anton Fishman</a></div>
 #Successfully Implementing HR Change Programmes by Anton Fishman
 #https://www.thebtn.tv/exclusive-content/video/successfully-implementing-hr-change-programmes-anton-fishman
+
+#When pages pinned to the top, they are scraped multiple times, *hence*: remove duplicates!!!
